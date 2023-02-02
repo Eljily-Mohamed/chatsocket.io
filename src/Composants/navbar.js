@@ -6,7 +6,7 @@ const  Nvbar =  () => {
       return (
          <nav className="nav-div"> 
             <div className="logo-div">
-               <p>Chat<span><img stc = {loveIcon}/></span></p>
+               <p>Chat<span><img stc = {loveIcon}/></span>App</p>
             </div>
             <div className="links-div"> 
                <ul> 
