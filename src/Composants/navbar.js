@@ -4,9 +4,9 @@ import loveIcon from  '../assest/love.png';
 
 const  Nvbar =  () => {
       return (
-         <nav className="nav-div"> 
+         <nav className='nav-div'> 
             <div className="logo-div">
-               <p>Chat<span><img stc = {loveIcon}/></span>App</p>
+               <p><span>Chat</span><img src={loveIcon}/><span>App</span></p>
             </div>
             <div className="links-div"> 
                <ul> 

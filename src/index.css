@@ -19,36 +19,49 @@
 *{
      margin:0;
      padding: 0;
-     /* background-color: #000; */
+     background-color: #000;
+     color:#fff;
+    
 }
+
 /* styling login-Page */
 
-/* .nav-div {
-    width: calc(100% -20px);
-    background-color: #fff;
+.nav-div {
+    width: calc(100% - 40px) ;
+    /* background-color: #fff; */
     color: #000;
     display: flex;
+    margin: auto;
+    margin-top:25px;
+    padding: 20px;
     justify-content: space-between;
-} */
-/* 
-.login-div .logo {
-       max-width:200px;
-       min-width:150px;
-       background-color: #fff;
-       color:black;
 }
 
-.login-div .logo p{
+.login-div .logo-div {
+     width:600px;
+     display: flex;
+     justify-content: center;
+}
+
+.login-div .logo-div p{
        font-family: 'Quicksand', sans-serif;
        font-size: 15px;
+       display: flex;
+       justify-content: center;
 }
 
-.login-div .logo span {
-     display: flex;
-     justify-content: centre;
-     align-items: centre;
+.login-div .logo-div p span{
+      margin: 3px;
+      margin-top:12px;
 }
 
-.login-div .logo span img {
-       width:20px;
-} */
+ .login-div .logo-div img {
+       width:30px;
+ }
+
+ .login-div .nav-div .links-div {
+      width:400px;
+ }
+ .log-div .nav-div .links-div {
+      
+ }
