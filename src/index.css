@@ -1,13 +1,54 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* start styling les elementes in loginPage  */
+/* importe les fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Jost:ital,wght@1,200&family=Montserrat:ital,wght@0,200;1,100;1,200&family=Poppins:ital,wght@0,200;1,100&family=Quicksand:wght@300;400&family=Roboto:ital,wght@0,300;1,100&display=swap');
+/* howe use in font  */
+/*
+    font-family: 'Abel', sans-serif;
+
+    font-family: 'Jost', sans-serif;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-family: 'Quicksand', sans-serif;
+
+    font-family: 'Roboto', sans-serif;
+*/
+
+*{
+     margin:0;
+     padding: 0;
+     /* background-color: #000; */
+}
+/* styling login-Page */
+
+/* .nav-div {
+    width: calc(100% -20px);
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+} */
+/* 
+.login-div .logo {
+       max-width:200px;
+       min-width:150px;
+       background-color: #fff;
+       color:black;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.login-div .logo p{
+       font-family: 'Quicksand', sans-serif;
+       font-size: 15px;
 }
+
+.login-div .logo span {
+     display: flex;
+     justify-content: centre;
+     align-items: centre;
+}
+
+.login-div .logo span img {
+       width:20px;
+} */
