@@ -10,8 +10,8 @@ const  Nvbar =  () => {
             </div>
             <div className="links-div"> 
                <ul> 
-               <li>Home</li>
-               <li>login</li>
+               <li><a href=''>Home</a></li>
+               <li><a href=''>Login</a></li>
                </ul>
             </div>
          </nav>
