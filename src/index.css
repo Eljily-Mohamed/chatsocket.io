@@ -24,7 +24,10 @@
     
 }
 
+
 /* styling login-Page */
+
+/* start Navbar */
 
 .nav-div {
     width: calc(100% - 40px) ;
@@ -52,7 +55,7 @@
 
 .login-div .logo-div p span{
       margin: 3px;
-      margin-top:12px;
+      margin-top:10px;
 }
 
  .login-div .logo-div img {
@@ -79,5 +82,9 @@
 }
 
 .links-div ul li a:active {
-      color:darkturquoise;
+      color:chocolate;
 }
+
+/* end Sytling Navbar Page  */
+
+
