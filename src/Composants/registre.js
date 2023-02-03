@@ -1,4 +1,3 @@
-
 const Registre = function () {
     return (
         <div className="Registre-div">

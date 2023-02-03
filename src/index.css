@@ -11,8 +11,6 @@
 
     font-family: 'Poppins', sans-serif;
 
-    font-family: 'Quicksand', sans-serif;
-
     font-family: 'Roboto', sans-serif;
 */
 
@@ -21,7 +19,7 @@
      padding: 0;
      background-color: #000;
      color:#fff;
-    
+     font-family: 'Abel', sans-serif;
 }
 
 
@@ -35,19 +33,16 @@
     color: #000;
     display: flex;
     margin: auto;
-    margin-top:25px;
-    padding: 20px;
+    margin-top:28px;
     justify-content: space-between;
 }
 
 .login-div .logo-div {
-     width:600px;
      display: flex;
      justify-content: center;
 }
 
 .login-div .logo-div p{
-       font-family: 'Quicksand', sans-serif;
        font-size:25px;
        display: flex;
        justify-content: center;
@@ -59,11 +54,16 @@
 }
 
  .login-div .logo-div img {
-       width:30px;
+       width:25px;
+       height:40px;
+       margin-top:5px;
  }
 
  .login-div .nav-div .links-div {
-      width:400px;
+      background-color: blue;
+      display: flex;
+      justify-content: center;
+      margin-top:13px;
  }
  .nav-div .links-div ul{
     list-style: none;
@@ -72,8 +72,7 @@
 
 .nav-div .links-div ul li {
     margin:7px;
-    font-size:20px;
-    font-family: 'Quicksand', sans-serif;
+    font-size:16px;
     cursor: pointer;
 }
 
