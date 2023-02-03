@@ -78,6 +78,6 @@
       text-decoration: none;
 }
 
-.links-div ul li a:hover {
-      
+.links-div ul li a:active {
+      color:darkturquoise;
 }
