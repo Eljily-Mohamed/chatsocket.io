@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300&display=swap');
+
+body {
+    font-family: 'Anuphan', sans-serif;
+}
