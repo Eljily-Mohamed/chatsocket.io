@@ -1,10 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-// first route
-
 router.get("/", (req, res) => {
-  res.send("Server listening ");
+  res.send("Hello World !!!");
 });
 
 module.exports = router;
