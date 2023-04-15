@@ -1,7 +1,7 @@
+import React from "react";
+
 const Join = () => {
-  return <div className="join">
-    <p>Hello in Join Component</p>
-  </div>;
+  return <h2>Hello in Join </h2>;
 };
 
 export default Join;
