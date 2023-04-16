@@ -11,13 +11,12 @@ const Chat = ({ location }) => {
   let socket;
   useEffect(() => {
     socket = io(ENDPOINT);
-
     setName(searchParams.get("name"));
     setRoomName(searchParams.get("room"));
     setTheme(searchParams.get("theme"));
 
     console.log(socket);
-  });
+  }, [ENDPOINT, searchParams]);
   return (
     <div className="chat">
       <p>Hello world</p>
