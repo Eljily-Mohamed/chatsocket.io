@@ -72,7 +72,12 @@ const Join = () => {
             }}
           />
           <div className="w-[250px] lg:w-[180px] m-auto ">
-            <Link to={`/chat?name=${name}&room=${roomName}&them=${theme}`}>
+            <Link
+              to={`/chat?name=${name}&room=${roomName}&them=${theme}`}
+              onClick={(event) =>
+                !name || !roomName ? event.preventDefault : null
+              }
+            >
               <button
                 className={`w-[200px] mt-[20px] h-[50px] font-bold bg-red-500 rounded-[5px] border-none p-[15px] text-${
                   theme == "white" ? "black" : "white"
