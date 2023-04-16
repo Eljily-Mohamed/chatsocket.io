@@ -7,10 +7,10 @@ const Join = () => {
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   const changeTheme = () => {
-    if (theme === "white") {
-      setTheme("black");
+    if (theme === "light") {
+      setTheme("dark");
     } else {
-      setTheme("white");
+      setTheme("light");
     }
   };
   useEffect(() => {
@@ -26,17 +26,10 @@ const Join = () => {
           alt="logo"
           className="w-[100px] h-[100px] "
         />
-        {theme === "white" ? (
-          <BsMoon
-            className="text-[30px] self-center text-white"
-            onClick={changeTheme}
-          />
-        ) : (
-          <BsSun
-            className="text-[30px] self-center text-white "
-            onClick={changeTheme}
-          />
-        )}
+        <BsMoon
+          className="text-[30px] self-center text-white"
+          onClick={changeTheme}
+        />
       </div>
       <div className="w-[100%] m-auto h-auto p-[20px] lg:mt-[200px] mt-[10px] ">
         <div className="w-[400px] m-auto">
@@ -53,7 +46,7 @@ const Join = () => {
             placeholder="Room Name"
             className="flex lg:w-[500px] w-[350px] h-[50px] py-[10px] px-[5px] rounded-[3px] outline-none mt-[20px] bg-black text-white"
           />
-          <div className="w-[250px] m-auto ">
+          <div className="w-[250px] lg:w-[100px] m-auto ">
             <button className="w-[200px] mt-[20px] h-[50px] bg-[#000] text-white rounded-[5px] border-none p-[15px] ">
               Join Room
             </button>
