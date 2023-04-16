@@ -11,7 +11,12 @@ const router = require("./router");
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
-
+app.use(
+  cors({
+    origin: "*",
+    Credential: true,
+  })
+);
 io.on("connection", (socket) => {
   console.log("connection established");
   socket.on("disconnect", () => {

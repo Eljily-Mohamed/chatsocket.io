@@ -7,12 +7,16 @@ const Chat = ({ location }) => {
   const [roomName, setRoomName] = useState("");
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "white");
   const [searchParams] = useSearchParams();
+  const ENDPOINT = "localhost:5000";
+  let socket;
   useEffect(() => {
+    socket = io(ENDPOINT);
+
     setName(searchParams.get("name"));
     setRoomName(searchParams.get("room"));
     setTheme(searchParams.get("theme"));
-    console.log(name);
-    console.log(roomName);
+
+    console.log(socket);
   });
   return (
     <div className="chat">
