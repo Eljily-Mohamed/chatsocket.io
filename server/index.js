@@ -21,10 +21,9 @@ app.use(cors());
 app.use(router);
 
 io.on("connect", (socket) => {
-  console.log("connexion established");
-
   socket.on("join", ({ nameUser, roomName }, callBack) => {
     const { error, user } = addUser({ id: socket.id, nameUser, roomName });
+    console.log(user)
     if (error) {
       return callBack(error);
     }
@@ -39,18 +38,16 @@ io.on("connect", (socket) => {
     socket.join(user.roomName);
     callBack();
   });
+
   socket.on("sendMessage", (message, callBack) => {
     const user = getUser(socket.id);
-    io.to(user.).emit("message", {
-      user: user.userName,
+    io.to(user.roomName).emit("message", {
+      user: user.nameUser,
       text: message,
     });
     callBack();
   });
 
-  socket.on("disconnect", () => {
-    console.log("connection closed");
-  });
 });
 
 server.listen(PORT, () => console.log(`Server listening on ${PORT}`));
