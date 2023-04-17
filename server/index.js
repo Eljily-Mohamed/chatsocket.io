@@ -2,7 +2,7 @@ const express = require("express");
 const socketIo = require("socket.io");
 const cors = require("cors");
 const http = require("http");
-const { getAllUsers, addUser, removeUser, getUser } = require("./users");
+const { addUser, removeUser, getAllUsers, getUser } = require("./users");
 // create notre server
 const PORT = process.env.PORT || 5000;
 // import router here
@@ -37,6 +37,14 @@ io.on("connect", (socket) => {
       text: `${user.nameUser} has joined the room`,
     });
     socket.join(user.roomName);
+    callBack();
+  });
+  socket.on("sendMessage", (message, callBack) => {
+    const user = getUser(socket.id);
+    io.to(user.).emit("message", {
+      user: user.userName,
+      text: message,
+    });
     callBack();
   });
 
