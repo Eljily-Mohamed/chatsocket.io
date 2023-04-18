@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import io from "socket.io-client";
+import NvbarChat from "./NvbarChat";
 
 var connectionOptions = {
   "force new connection": true,
@@ -37,9 +38,11 @@ const Chat = ({ location }) => {
   useEffect(() => {
     socket.on("message", (message) => {
       console.log(message);
-      setMessage([...messages, message]);
+      setMessages([...messages, message]);
     });
   }, [messages]);
+
+  
   //function ro send message
   const sendMessage = (event) => {
     event.preventDefault();
@@ -52,18 +55,7 @@ const Chat = ({ location }) => {
   console.log(messages);
   return (
     <div className="chat">
-      <div className="">
-        <input
-          value={message}
-          type="text"
-          onChange={(event) => {
-            setMessage(event.target.value);
-          }}
-          onKeyPress={(event) =>
-            event.key === "Enter" ? sendMessage(event) : null
-          }
-        />
-      </div>
+       <NvbarChat/>
     </div>
   );
 };
