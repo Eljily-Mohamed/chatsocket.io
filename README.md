@@ -1,7 +1,8 @@
 Chatroom with Socket.io and React
 This is a simple chatroom application built using Socket.io and React. Users can join the chatroom and send messages to other connected users in real-time.
 
-![Alt text](./chat.png)
+![Alt text](./join.png)
+
 
 Getting started
 To get started with this project, follow these steps:
