@@ -54,9 +54,7 @@ const Join = () => {
           <input
             type="text"
             placeholder="Your Name"
-            className={`flex lg:w-[500px] w-[350px] h-[50px] py-[10px] px-[5px] rounded-[3px] outline-none bg-${
-              theme == "white" ? "black" : "white"
-            } mt-[20px] `}
+            className={`flex lg:w-[500px] w-[350px] h-[50px] py-[10px] px-[5px] rounded-[3px] outline-none mt-[20px]`}
             onChange={(event) => {
               setName(event.target.value);
             }}
@@ -64,9 +62,7 @@ const Join = () => {
           <input
             type="text"
             placeholder="Room Name"
-            className={`flex lg:w-[500px] w-[350px] h-[50px] py-[10px] px-[5px] rounded-[3px] outline-none bg-${
-              theme == "white" ? "black" : "white"
-            } mt-[20px] `}
+            className={`flex lg:w-[500px] w-[350px] h-[50px] py-[10px] px-[5px] rounded-[3px] outline-none mt-[20px]`}
             onChange={(event) => {
               setRoomName(event.target.value);
             }}

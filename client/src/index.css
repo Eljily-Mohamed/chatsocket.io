@@ -7,3 +7,20 @@
 body {
     font-family: 'Source Serif Pro', serif;
 }
+
+.black input{
+     background-color: white;
+     color:black;
+}
+.white input{
+     background-color: black;
+     color: white;
+}
+.chat .black {
+    background-color: #fff;
+    color: #000;
+}
+.chat .white {
+    background-color: #000;
+    color:#fff
+}

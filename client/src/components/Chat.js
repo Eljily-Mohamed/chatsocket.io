@@ -4,6 +4,7 @@ import io from "socket.io-client";
 import NvbarChat from "./NvbarChat";
 import Input from "./Input";
 import Messages from "./Messages";
+
 var connectionOptions = {
   "force new connection": true,
   reconnectionAttempts: "Infinity",
@@ -16,11 +17,25 @@ var socket = io.connect("http://localhost:5000", connectionOptions);
 const Chat = ({ location }) => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
-  const [theme, setTheme] = useState("");
+  const [users, setUsers] = useState("");
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [searchParams] = useSearchParams();
   const ENDPOINT = "localhost:5000";
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "white");
+
+  const changeTheme = () => {
+    if (theme === "white") {
+      setTheme("black");
+    } else {
+      setTheme("white");
+    }
+  };
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    document.body.style.backgroundColor = theme;
+  }, [theme]);
+
   useEffect(() => {
     const nameUser = searchParams.get("name");
     const roomName = searchParams.get("room");
@@ -29,9 +44,13 @@ const Chat = ({ location }) => {
     setRoom(roomName);
     setTheme(themApp);
 
-    socket.emit("join", { name: nameUser, room: roomName }, () => {});
+    socket.emit("join", { name: nameUser, room: roomName }, (error) => {
+      if (error) {
+        alert(error);
+      }
+    });
     return () => {
-      socket.disconnect();
+      socket.emit("disconnection");
       socket.off();
     };
   }, [ENDPOINT, searchParams]);
@@ -46,6 +65,7 @@ const Chat = ({ location }) => {
   //function ro send message
   const sendMessage = (event) => {
     event.preventDefault();
+    console.log(message);
     if (message) {
       socket.emit("sendMessage", message, () => setMessage(""));
     }
@@ -54,10 +74,15 @@ const Chat = ({ location }) => {
   console.log(message);
   console.log(messages);
   return (
-    <div className="chat">
-      <NvbarChat room={room} />
+    <div className="chat lg:w-[600px] lg:m-auto lg:h-[400px]">
+      <NvbarChat room={room} theme={theme} changeTheme={changeTheme} />
       <Messages messages={messages} name={name} />
-      <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
+      <Input
+        theme={theme}
+        message={message}
+        setMessage={setMessage}
+        sendMessage={sendMessage}
+      />
     </div>
   );
 };
