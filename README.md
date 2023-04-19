@@ -18,16 +18,15 @@ To get started with this project, follow these steps:
 This project was built using the following technologies:
 
 - React
-- Node.js
-- Express
-- MongoDB
+- socket.io
+- express
+- tailwind css
 
 ## Usage
 
 Here is an example of how to use my project:
 
 ![Alt text](./join.png)
-![Alt text](./chat.png)
 
 ## Contributing
 
