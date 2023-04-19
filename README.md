@@ -27,7 +27,7 @@ This project was built using the following technologies:
 Here is an example of how to use my project:
 
 ![Alt text](./join.png)
-![Alt text](./chat_light.png)
+![Alt text](./chat.png)
 
 ## Contributing
 
